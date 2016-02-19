@@ -1,0 +1,85 @@
+/* HTML overrides */
+body{
+  font-family: 'Dosis', sans-serif;
+}
+a, a:hover,a:active {
+  color: #FFFFFF;
+}
+/* Color Pallet */
+.dark-primary-color {
+  background: #214760;
+}
+.text-primary-color {
+  color: #FFFFFF;
+}
+.primary-text-color {
+  color: #212121;
+}
+.accent-color {
+  background-color: #ff8e2a;
+}
+
+/* Bootstrap 'overrides' */
+.row {
+  padding: .7em 0;
+  width: 60%;
+}
+.row img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4em;
+}
+.progress {
+  text-align: center;
+}
+
+/* Font Awesome 'overrides' */
+.fa-3x {
+  vertical-align: middle;
+  height: 50px;
+}
+/* Custom Rules */
+.vertical-center {
+  min-height: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  flex-basis: auto;
+  flex-direction: column;
+}
+.texto {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.texto h1 {
+  font-size: 2.5em !important;
+}
+.derecha {
+  text-align: right;
+}
+.random {
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.2em;
+}
+
+#pbar_innertext {
+  position: absolute;
+  right: 0;
+  left: 0;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+@media (max-width: 1024px) {
+  .texto h1 {
+    text-align: center !important;
+    font-size: 1.5em !important;
+  }
+  .row {
+    width: 90%;
+  }
+}
