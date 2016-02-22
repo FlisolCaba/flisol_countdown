@@ -2,7 +2,7 @@
 body{
   font-family: 'Dosis', sans-serif;
 }
-a, a:hover,a:active {
+a, a:hover,a:active,a:focus {
   color: #FFFFFF;
 }
 /* Color Pallet */
@@ -22,7 +22,7 @@ a, a:hover,a:active {
 /* Bootstrap 'overrides' */
 .row {
   padding: .7em 0;
-  width: 60%;
+  width: 70%;
 }
 .row img {
   display: block;
@@ -73,7 +73,11 @@ a, a:hover,a:active {
   font-weight: bold;
   font-size: 1.3em;
 }
-
+@media(min-width:1024px) and (max-width:1280px){
+  .row {
+    width: 90%;
+  }
+}
 @media (max-width: 1024px) {
   .texto h1 {
     text-align: center !important;

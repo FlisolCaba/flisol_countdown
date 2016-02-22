@@ -41,7 +41,11 @@ var frases = [
   "Determining Minimum Effort",
   "Sleeping Really Badly",
   "Committing git Suicide",
-  "Sending Backups To /dev/null"
+  "Sending Backups To /dev/null",
+  "Tweeting From A Dumb Printer",
+  "Overheating Printers",
+  "Preparing <s>Printers</s> Computers",
+  "Hiring Microsoft Experts"
 ];
 
 function updateProgress(percentage) {
@@ -69,6 +73,6 @@ function animateUpdate() {
 
 function randomFrase(){
   var index = Math.floor(Math.random()*(42+1));
-  $("#randomText").text(frases[index]);
+  $("#randomText").html(frases[index]);
   setTimeout(randomFrase, 3000);
 }
