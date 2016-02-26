@@ -9,7 +9,7 @@ var frases = [
   "Untangling Wires",
   "Downloading Never-Used Distributions",
   "Normalizing Power",
-  "Searching Founds",
+  "Searching For Founds",
   "Designing T-Shirts",
   "Resolving GUID Conflicts",
   "Adding Negative Karma To Systemd",
@@ -72,7 +72,7 @@ function animateUpdate() {
 }
 
 function randomFrase(){
-  var index = Math.floor(Math.random()*(42+1));
+  var index = Math.floor(Math.random()*(frases.length));
   $("#randomText").html(frases[index]);
   setTimeout(randomFrase, 3000);
 }

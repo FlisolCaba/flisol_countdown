@@ -24,12 +24,6 @@ a, a:hover,a:active,a:focus {
   padding: .7em 0;
   width: 70%;
 }
-.row img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 4em;
-}
 .progress {
   text-align: center;
 }
@@ -37,6 +31,9 @@ a, a:hover,a:active,a:focus {
 /* Font Awesome 'overrides' */
 .fa-3x {
   vertical-align: middle;
+  height: 50px;
+}
+.fa-2x{
   height: 50px;
 }
 /* Custom Rules */
@@ -65,7 +62,15 @@ a, a:hover,a:active,a:focus {
   font-weight: 500;
   font-size: 1.2em;
 }
-
+.space{
+  margin-left: 0.3em;
+}
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4em;
+}
 #pbar_innertext {
   position: absolute;
   right: 0;
@@ -79,11 +84,17 @@ a, a:hover,a:active,a:focus {
   }
 }
 @media (max-width: 1024px) {
+  ul,li{
+    margin-bottom: 0.3em !important;
+  }
   .texto h1 {
     text-align: center !important;
     font-size: 1.5em !important;
   }
   .row {
-    width: 90%;
+    width: 95%;
+  }
+  .logo{
+    margin-bottom: 1em;
   }
 }
