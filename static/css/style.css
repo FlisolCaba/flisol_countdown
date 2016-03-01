@@ -1,13 +1,19 @@
 /* HTML overrides */
-body{
+
+body {
   font-family: 'Dosis', sans-serif;
 }
-a, a:hover,a:active,a:focus {
+a, a:hover, a:active, a:focus {
   color: #FFFFFF;
 }
+
 /* Color Pallet */
+
 .dark-primary-color {
   background: #214760;
+}
+.dark-primary-text-color {
+  color: #214760;
 }
 .text-primary-color {
   color: #FFFFFF;
@@ -20,6 +26,7 @@ a, a:hover,a:active,a:focus {
 }
 
 /* Bootstrap 'overrides' */
+
 .row {
   padding: .7em 0;
   width: 70%;
@@ -27,16 +34,28 @@ a, a:hover,a:active,a:focus {
 .progress {
   text-align: center;
 }
+.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+}
+.popover {
+  border: 2px solid #FFF;
+  background-color: #214760;
+}
 
 /* Font Awesome 'overrides' */
+
 .fa-3x {
   vertical-align: middle;
   height: 50px;
 }
-.fa-2x{
+.fa-2x,
+.fa-stack {
   height: 50px;
 }
+
 /* Custom Rules */
+
 .vertical-center {
   min-height: 100%;
   min-height: 100vh;
@@ -62,7 +81,7 @@ a, a:hover,a:active,a:focus {
   font-weight: 500;
   font-size: 1.2em;
 }
-.space{
+.space {
   margin-left: 0.3em;
 }
 .logo {
@@ -71,6 +90,9 @@ a, a:hover,a:active,a:focus {
   margin-right: auto;
   margin-bottom: 4em;
 }
+.center {
+  text-align: center;
+}
 #pbar_innertext {
   position: absolute;
   right: 0;
@@ -78,13 +100,25 @@ a, a:hover,a:active,a:focus {
   font-weight: bold;
   font-size: 1.3em;
 }
-@media(min-width:1024px) and (max-width:1280px){
+
+/* Popover */
+
+#popover-span .popover.top {
+  margin-top: -20px;
+}
+#popover-span .popover-content {
+  padding: 10px;
+}
+#popover-span li:last-child {
+  margin-bottom: -8px;
+}
+@media(min-width:1024px) and (max-width:1280px) {
   .row {
     width: 90%;
   }
 }
 @media (max-width: 1024px) {
-  ul,li{
+  ul, li {
     margin-bottom: 0.3em !important;
   }
   .texto h1 {
@@ -94,7 +128,7 @@ a, a:hover,a:active,a:focus {
   .row {
     width: 95%;
   }
-  .logo{
+  .logo {
     margin-bottom: 1em;
   }
 }

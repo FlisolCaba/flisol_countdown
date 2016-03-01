@@ -21,7 +21,7 @@
 
 <body class="dark-primary-color backimg">
   <!--[if lt IE 10]>
-      <p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <p>Estas utilizando un navegador <strong>desactualizado</strong>. Por favor, <a href="http://browsehappy.com/">actualiza tu navegador</a> para mejorar tu experiencia.</p>
     <![endif]-->
   <div class="container-fluid vertical-center">
     <div class="row">
@@ -52,42 +52,71 @@
       </div>
     </div>
     <div class="row text-primary-color">
-      <div class="col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-2 col-md-8 col-lg-offset-2 col-lg-8 texto">
+      <div class="col-xs-12 col-sm-offset-2 col-sm-9 col-md-offset-2 col-md-9 col-lg-offset-2 col-lg-9 texto">
         <ul class="nav nav-justified">
           <li>
-            <i class="fa fa-twitter-square fa-3x"></i>
-            <span class="texto space"><a href="https://twitter.com/FlisolCABA">@FlisolCABA</a></span>
-          </li>
-          <li>
-            <i class="fa fa-facebook-square fa-3x"></i>
-            <span class="texto space"><a href="https://www.facebook.com/Flisol.caba/">/Flisol.caba</a></span>
-          </li>
-          <li>
-            <i class="fa fa-envelope-square fa-3x"></i>
-            <span class="texto space"><a href="mailto:contacto@flisolcaba.usla.org.ar">Contacto</a></span>
+            <span><i class="fa fa-bullhorn fa-3x"></i></span>
+            <span id="popover-span"><a id="link-popover-social" class="space texto" role="button" data-toggle="popover"> Social</a></span>
           </li>
           <li>
             <span><img alt="Meetup" src="static/images/meetup.png"/></span>
             <span class="texto space"><a href="http://www.meetup.com/FLISOL-CABA-organizacion/">Reuniones</a></span>
           </li>
-        </ul>
-          <ul class="nav nav-justified">
           <li>
             <i class="fa fa-info-circle fa-3x"></i>
             <span class="texto space"><a href="http://www.flisol.info">Información</a></span>
           </li>
           <li>
             <i class="fa fa-wikipedia-w fa-2x"></i>
-            <span class="texto space"><a href="http://wiki.cafelug.org.ar/index.php/Flisol/2016">Archivo Organización</a></span>
+            <span class="texto space"><a href="http://wiki.cafelug.org.ar/index.php/Flisol/2016">Archivo</a></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row text-primary-color">
+      <div class="col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-2 col-md-8 col-lg-offset-2 col-lg-8 texto">
+        <ul class="nav nav-justified center">
+          <li>
+            <i class="fa fa-comments-o fa-3x"></i>
+            <span class="texto space"><a href="http://wiki.cafelug.org.ar/index.php/Flisol/2016/Recursos/CFC">Call for Charlas</a></span>
           </li>
           <li>
-            <i class="fa fa-paper-plane-o fa-2x"></i>
-            <span class="texto space"><a href="https://telegram.me/flisolcaba">Difusión Telegram</a></span>
+            <i class="fa fa-cogs fa-3x"></i>
+            <span class="texto space"><a href="http://wiki.cafelug.org.ar/index.php/Flisol/2016/Recursos/CallForColaboradores">Call for Colaboradores</a></span>
+          </li>
+          <li>
+            <i class="fa fa-users fa-3x"></i>
+            <span class="texto space"><a href="http://wiki.cafelug.org.ar/index.php/Flisol/2016/Recursos/Comunidades">Call for Comunidades</a></span>
           </li>
         </ul>
       </div>
     </div>
   </div>
+
+  <div id="popover-social" class="hide">
+    <ul class="nav nav-stacked dark-primary-color">
+      <li>
+        <i class="fa fa-twitter-square fa-3x"></i>
+        <span class="texto space"><a href="https://twitter.com/FlisolCABA">@FlisolCABA</a></span>
+      </li>
+      <li>
+        <i class="fa fa-facebook-square fa-3x"></i>
+        <span class="texto space"><a href="https://www.facebook.com/Flisol.caba/">/Flisol.caba</a></span>
+      </li>
+      <li>
+        <i class="fa fa-envelope-square fa-3x"></i>
+        <span class="texto space"><a href="mailto:contacto@flisolcaba.usla.org.ar">Contacto</a></span>
+      </li>
+      <li>
+        <span class="fa-stack fa-lg">
+            <i class="fa fa-square fa-stack-2x"></i>
+            <i class="fa fa-paper-plane fa-stack-1x dark-primary-text-color"></i>
+        </span>
+        <span class="texto space"><a href="https://telegram.me/flisolcaba">Telegram</a></span>
+      </li>
+    </ul>
+  </div>
+
 
   <script src="static/js/jquery-2.2.0.min.js"></script>
   <script src="static/js/bootstrap.min.js"></script>
@@ -96,6 +125,19 @@
     $(function() {
       animateUpdate();
       randomFrase();
+      $('#link-popover-social').popover({
+        trigger: "hover",
+        placement: 'top',
+        delay: {
+          "show": 0,
+          "hide": 5000
+        },
+        template: '<div class="popover" role="tooltip"><div class="arrow"></div><div class="popover-content" onmouseleave="close_popover($(\'#link-popover-social\'));"></div></div>',
+        html: true,
+        content: function() {
+          return $('#popover-social').html();
+        }
+      });
     });
   </script>
 </body>
