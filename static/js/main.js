@@ -54,8 +54,8 @@ function updateProgress(percentage) {
 }
 
 function animateUpdate() {
-  var start = new Date(Date.UTC(2016, 0, 1, 0, 0, 0, 0));
-  var end = new Date(Date.UTC(2016, 3, 23, 10, 0, 0, 0));
+  var start = new Date(Date.UTC(2017, 0, 1, 0, 0, 0, 0));
+  var end = new Date(Date.UTC(2017, 3, 22, 10, 0, 0, 0));
   var maxTime = end.getTime() - start.getTime();
   var timeoutVal = Math.floor(maxTime / 100);
 
