@@ -31,7 +31,7 @@ var frases = [
   "Stealing Hard Drives",
   "Conquering The World",
   "Reviewing Conquering Plans",
-  "Talking With The MiTM",
+  "Talking With The MitM",
   "Restoring btrfs",
   "Defragmenting Hard Drives",
   "Migrating Flux Capacitor",
@@ -45,7 +45,11 @@ var frases = [
   "Tweeting From A Dumb Printer",
   "Overheating Printers",
   "Preparing <s>Printers</s> Computers",
-  "Hiring Microsoft Experts"
+  "Hiring Microsoft Experts",
+  "Building Flisolator",
+  "Debugging eventoL",
+  "Exploiting Spectre While You Read This",
+  "Mining Bitcoins With Your Browser"
 ];
 
 function updateProgress(percentage) {
@@ -54,8 +58,8 @@ function updateProgress(percentage) {
 }
 
 function animateUpdate() {
-  var start = new Date(Date.UTC(2017, 0, 1, 0, 0, 0, 0));
-  var end = new Date(Date.UTC(2017, 3, 22, 10, 0, 0, 0));
+  var start = new Date(Date.UTC(2018, 0, 1, 0, 0, 0, 0));
+  var end = new Date(Date.UTC(2018, 4, 21, 10, 0, 0, 0));
   var maxTime = end.getTime() - start.getTime();
   var timeoutVal = Math.floor(maxTime / 100);
 
