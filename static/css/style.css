@@ -73,6 +73,9 @@ a, a:hover, a:active, a:focus {
 .texto h1 {
   font-size: 2.5em !important;
 }
+.texto h2 {
+  font-size: 2em;
+}
 .derecha {
   text-align: right;
 }
@@ -100,6 +103,9 @@ a, a:hover, a:active, a:focus {
   font-weight: bold;
   font-size: 1.3em;
 }
+.links {
+    margin-top: 20px;
+}
 
 /* Popover */
 
@@ -125,6 +131,10 @@ a, a:hover, a:active, a:focus {
     text-align: center !important;
     font-size: 1.5em !important;
   }
+  .texto h2 {
+    text-align: center !important;
+    font-size: 1em !important;
+  }
   .row {
     width: 95%;
   }
@@ -133,5 +143,8 @@ a, a:hover, a:active, a:focus {
   }
   .center{
     text-align: left;
+  }
+  .links {
+    margin-top: 0;
   }
 }
